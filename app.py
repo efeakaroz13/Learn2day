@@ -39,10 +39,10 @@ def home():
             pass
 
     data =  {"word":out,"meaning":meaning,"summary":summary,"images":imgout,"summarytr":summarytr}
-    return data
+    #return data
 
 
-    #return render_template("index.html")
+    return render_template("index.html",data=data)
 
 
 app.run(debug=True)
