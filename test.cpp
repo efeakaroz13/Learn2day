@@ -1,3 +1,5 @@
+//author: Efe Akaröz
+//compile:g++ -o corewiki -std=c++11 test.cpp -lcurl
 #include <iostream>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
