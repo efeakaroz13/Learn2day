@@ -6,8 +6,10 @@ from bs4 import BeautifulSoup
 import random
 import json
 import multiprocessing
+import os
 
 requests_session = requests.Session()
+"""
 def getwiki():
     while True:
         try:
@@ -24,7 +26,21 @@ def getwiki():
     oldjson = json.loads(open("out.json","r").read())
     oldjson["summary"] = summary 
     open("out.json","w").write(json.dumps(oldjson,indent=4))
-
+"""
+def getwiki():
+    worder = open("words.txt").readlines()
+    word = random.choice(worder).replace("\n","")
+    data = {"word":word}
+    open("out.json","w").write(json.dumps(data,indent=4))
+    while True:
+        try:
+            oldjson = json.loads(open("out.json","r").read())
+            word=  oldjson["word"]
+            break 
+        except:
+            pass
+    os.system(f"""./corewiki "{word}" """)
+    
 
 def getimage():
     while True:
@@ -49,21 +65,17 @@ def getimage():
     oldjson["images"] = imgout 
     open("out.json","w").write(json.dumps(oldjson,indent=4))
 
-def selectword():
-    worder = open("words.txt").readlines()
-    word = random.choice(worder).replace("\n","")
-    data = {"word":word}
-    open("out.json","w").write(json.dumps(data,indent=4))
+
 
 
 if __name__ == "__main__":
     p1 = multiprocessing.Process(target=getimage)
     p2 = multiprocessing.Process(target=getwiki)
-    p3 = multiprocessing.Process(target=selectword)
-    p3.start()
+
+
     p1.start()
     p2.start()
     p2.join()
-    p3.join()
+
     p1.join()
 

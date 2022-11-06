@@ -7,10 +7,12 @@ import json
 import translators as ts
 import wikipedia
 from bs4 import BeautifulSoup 
+import os
 
 app = Flask(__name__)
 @app.route("/")
 def home():
+    """
     out = json.loads(requests.get("https://random-word-api.herokuapp.com/word").content)
     out = out[0]
     meaning = ts.google(out,from_language='en', to_language='tr')
@@ -41,7 +43,10 @@ def home():
     data =  {"word":out,"meaning":meaning,"summary":summary,"images":imgout,"summarytr":summarytr}
     #return data
 
-
+    """
+    os.system("python3 scraper.py")
+    data= json.loads(open("out.json","r").read())
+    
     return render_template("index.html",data=data)
 
 

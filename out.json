@@ -1,5 +1,27 @@
 {
-    "pageid": 72038,
-    "sum": "C++ (pronounced \"C plus plus\") is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or \"C with Classes\". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation. It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle, and IBM, so it is available on many platforms.C++ was designed with systems programming and embedded, resource-constrained software and large systems in mind, with performance, efficiency, and flexibility of use as its design highlights. C++ has also been found useful in many other contexts, with key strengths being software infrastructure and resource-constrained applications, including desktop applications, video games, servers (e.g. e-commerce, web search, or databases), and performance-critical applications (e.g. telephone switches or space probes).C++ is standardized by the International Organization for Standardization (ISO), with the latest standard version ratified and published by ISO in December 2020 as ISO/IEC 14882:2020 (informally known as C++20). The C++ programming language was initially standardized in 1998 as ISO/IEC 14882:1998, which was then amended by the C++03, C++11, C++14, and C++17 standards. The current C++20 standard supersedes these with new features and an enlarged standard library.  Before the initial standardization in 1998, C++ was developed by Stroustrup at Bell Labs since 1979 as an extension of the C language; he wanted an efficient and flexible language similar to C that also provided high-level features for program organization. Since 2012, C++ has been on a three-year release schedule with C++23 as the next planned standard.",
-    "word": "c plus plus"
+    "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwB1YKnAgQM84u9lVb0Tkn7y-oK2s1HD66BHG_Rgn6_RNVlsNvNZMbSG0Dhg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFGdatLtMIdTFok_93LT5K4HIo1G6bfJeh399rKcDS9DRZGMQCT0E8X8Iy9c8&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfYjuajJaK4tpLGRQmVQzYFInGV11mmDRBJxKemqF8E0VGUiiISuy1K6tdsg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRghg7u5AFirGy7lblOc4RYJZ9iYMebq6uRdDlEdErpsY-09LV2EFsQpNN54l0&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMkk4VVK-UTwd76i1rYXp6Rh3zk0bXwVx9Q6RgcynZmFkzP0MdUaqogWbhxo&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_b52Yb-528hj2T-51wiB_jK422EpRodehp-EhEJ7uDk1Guw8HemoO_WLgKI&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDrWPNVLaP2ihSTU99it9FplDdpvUraGlK1fpPsNj1HASKpttZx7Y8dY-E8s&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPB4N46fTFJY_0Nh-tQG-oK9wwvhdpwMF29PV-Q6PkrS1NrWUzOLbIqN_dRA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4Wd1tQqMkFu6eB_mqvOeDaGu8OqxT9_1TSZEIxlVHuRA5W5Nk8Px4JpbOkw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRswt8OK2XHBBFk6COafQi0oSwQPoY-dzg2bXprEds96YMmqFzsK5T102ZWS3I&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDz-I7Lpw_zS1IM_q1ltSm61dB6cNj9aluFo8brzNVAMDXycvv-9TSTOnRtQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSECKA9tWitsFyH5Yc4eQp2nFTn4_JlvpAbOZvEKFGvM2A5bqlpqLOZwD-tfe4&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjKOj1VzfW2xp5vKbnWBAEcChDxo_PC8WTm3kyftQweXjH_7t55s0INBg7kQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSmQfzfRcQLTNQkj0D1-v7RoNDXtnuTKvZBttm8g-dOPvnHQV5aYXUZymYmlc&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCsfSYu-1ne9Nl43529sI03vZ9FpsjYPfSeal6kfsrgOoJOZjXwc3ygbdgQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-7jFvAs1Jiex-HvIJEJNBOaZ4dEwrCglIcinabhkDSjnDd-jFV5gpdy9Pmg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx6UNWI8TosUl-gM-RNIhqr0hTpg7j-y293-lVYomjxqGPJfENyg1uQMhYc2Y&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeMCt3w_kkQ-sxm81MI5DYh4pl00hISrrS5loFI0OD2cj8MiCP5z36BFltyA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQOZLMWcwIavGheP3sX8zuB_chOVE-aqC0rydUo2n2Hud7ojykTNfSCcMMePI&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-CMy_JFiAMVVl-xwH8Z9J_OZFgf12i9qjxL8t0E7eCGGx4X69nQo5iMJvig&s"
+    ],
+    "pageid": 59245501,
+    "summary": "Flat sawing, flitch sawing or plain sawing is a woodworking process that produces flat cut or plain cut boards of lumber.\n\n",
+    "word": "slash-sawn"
 }

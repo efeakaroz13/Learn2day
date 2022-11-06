@@ -21,11 +21,11 @@ namespace
 }
 
 int main(int argc, char *argv[]){
-    json output;
+    
     if(argc>1){
 
         string word= argv[1];
-        output["word"]=word;
+        string word2 = word;
         std::replace(word.begin(),word.end(),' ','+');
         string url = "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch="+word;
         CURL* curl = curl_easy_init();
@@ -71,9 +71,12 @@ int main(int argc, char *argv[]){
             cout<<"\n";
             string summary = summaryparser["query"]["pages"][str1]["extract"];
             cout<< summary;
+            ifstream myjson("out.json");
+
+            json output = json::parse(myjson);
             output["pageid"] = pageid;
-            
-            output["sum"] = summary;
+            output["word"] = word2;
+            output["summary"] = summary;
             std::ofstream o("out.json");
 		    o << std::setw(4) << output << std::endl;
 
