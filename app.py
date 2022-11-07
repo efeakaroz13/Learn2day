@@ -8,8 +8,11 @@ import translators as ts
 import wikipedia
 from bs4 import BeautifulSoup 
 import os
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 @app.route("/")
 def home():
     """
@@ -48,6 +51,22 @@ def home():
     data= json.loads(open("out.json","r").read())
     
     return render_template("index.html",data=data)
+
+
+@app.route("/api")
+def api():
+    os.system("python3 scraper.py")
+    jsonloader = json.loads(open("out.json","r").read())
+    try:
+        jsonloader["summary"]
+    except:
+        jsonloader["summary"] = "404"
+
+
+    
+    return jsonloader
+
+
 
 
 app.run(debug=True)
