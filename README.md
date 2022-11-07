@@ -14,7 +14,7 @@ This is the official Learn2day documentation. The API endpoint is at `/api` but 
 `lang`: you can specify the language for translating the english word
 note: `lang` makes the API slower because it translates the wikipedia summary and the word. For faster results use without `lang` argument
 
-#TODO
+# TODO
 ## Translate optionality to summary and word
 ## Image optional
 ## Image quality
