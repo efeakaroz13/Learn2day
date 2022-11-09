@@ -47,9 +47,8 @@ def home():
     #return data
 
     """
-    os.system("python3 scraper.py")
-    data= json.loads(open("out.json","r").read())
-    
+    data=json.loads(requests.get("http://127.0.0.1:5000/api?lang=tr").content)
+    return data
     return render_template("index.html",data=data)
 
 
