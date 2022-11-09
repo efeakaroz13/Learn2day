@@ -48,7 +48,7 @@ def home():
 
     """
     data=json.loads(requests.get("http://127.0.0.1:5000/api?lang=tr").content)
-    return data
+    
     return render_template("index.html",data=data)
 
 
@@ -59,7 +59,7 @@ def api():
     try:
         jsonloader["summary"]
     except:
-        jsonloader["summary"] = "404"
+        jsonloader["summary"] = "-"
 
     language = request.args.get("lang")
     
@@ -68,17 +68,17 @@ def api():
         return jsonloader
     if language != None or language != "en":
         try:
-            if summary != "404":
+            if summary != "-":
                 summarytranslated= ts.google(summary,from_language="en",to_language=language)
             else:
-                summarytranslated="404"
+                summarytranslated="-"
             
             wordtranslated = ts.google(jsonloader["word"],from_language="en",to_language=language)
             jsonloader["wordtranslated"] = wordtranslated
             jsonloader["summarytranslated"]= summarytranslated
         except Exception as e:
-            jsonloader["wordtranslated"] = "404"
-            jsonloader["summarytranslated"]= "404"
+            jsonloader["wordtranslated"] = "-"
+            jsonloader["summarytranslated"]= "-"
             jsonloader["supported"] = ['af', 'ak', 'am', 'ar', 'as', 'ay', 'az', 'be', 'bg', 'bho', 'bm', 'bn', 'bs', 'ca', 'ceb', 'ckb', 'co', 'cs', 'cy', 'da', 'de', 'doi', 'dv', 'ee', 'el', 'en', 'en-US', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'hi', 'hmn', 'hr', 'ht', 'hu', 'hy', 'id', 'ig', 'ilo', 'is', 'it', 'iw', 'ja', 'jw', 'ka', 'kk', 'km', 'kn', 'ko', 'kri', 'ku', 'ky', 'la', 'lb', 'lg', 'ln', 'lo', 'lt', 'lus', 'lv', 'mai', 'mg', 'mi', 'mk', 'ml', 'mn', 'mni-Mtei', 'mr', 'ms', 'mt', 'my', 'ne', 'nl', 'no', 'nso', 'ny', 'om', 'or', 'pa', 'pl', 'ps', 'pt', 'qu', 'ro', 'ru', 'rw', 'sa', 'sd', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'st', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tr', 'ts', 'tt', 'ug', 'uk', 'ur', 'uz', 'vi', 'xh', 'yi', 'yo', 'zh-CN', 'zh-TW', 'zu']
             jsonloader["docs_warning"] = "You can read the docs from https://github.com/efeakaroz13/Learn2day"
         
