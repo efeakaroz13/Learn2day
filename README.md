@@ -1,7 +1,7 @@
 # Learn2day
 A web application which helps people to learn English with wikipedia articles and images!
-### Note
-I will write a code to make a server with it soon!
+![Learn2day web interface](https://lh3.googleusercontent.com/drive-viewer/AJc5JmT2ak7tYTUdhPafCfAA1QbSkIbFhO7tEYzgvtd4s5vn1iJxyEuZ34A5DTuv0QqMjXWEPodTF2e6t6pqhXzz7sXEggQrFQ=w2880-h1432 "Web UI")
+
 # Tech behind the project
 ## Python Side
 I used  `python flask` to render an html template on browser;  `requests` for retrieving html from external links and  `BeautifulSoup4` for scraping the html page.
